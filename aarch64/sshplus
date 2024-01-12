@@ -103,10 +103,10 @@ cd
 cd
 cd
 rm sshplus
-rm -f /usr/bin/dtmenu /usr/bin/proxy
-curl -s -L -o /usr/bin/dtmenu https://github.com/Gabrielssh/Dtsshmain/raw/main/$(uname -m)/dtmenu
+rm -f /usr/bin/main /usr/bin/proxy
+curl -s -L -o /usr/bin/main https://github.com/Gabrielssh/Dtsshmain/raw/main/$(uname -m)/main
 curl -s -L -o /usr/bin/proxy https://github.com/Gabrielssh/Dtsshmain/raw/main/$(uname -m)/proxy
-chmod +x /usr/bin/dtmenu /usr/bin/proxy
+chmod +x /usr/bin/main /usr/bin/proxy
 chmod +x /etc/autostart
 (crontab -l 2>/dev/null; echo "@reboot /etc/autostart") | crontab -
 (crontab -l 2>/dev/null; echo "* * * * * /etc/autostart") | crontab -
@@ -118,8 +118,7 @@ echo -e "\033[1;31m════════════════════�
 echo ""
 echo ""
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "Painel SSHPLUS: menu | Painel DTProxy: dtmenu" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "Painel SSHPLUS: menu | Painel DTProxy: main" ; tput sgr0
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
 echo ""
 echo ""
-
